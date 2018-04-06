@@ -1,10 +1,21 @@
-﻿  PhysicsWorld.cpp
+﻿  DebugScene.cpp
   c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
 c:\users\kirit\desktop\bullet3-2.87\src\linearmath\btidebugdraw.h(169): warning C4305: '引数': 'double' から 'const btScalar' へ切り詰めます。
 c:\users\kirit\desktop\bullet3-2.87\src\linearmath\btidebugdraw.h(170): warning C4305: '引数': 'double' から 'const btScalar' へ切り詰めます。
 c:\users\kirit\desktop\bullet3-2.87\src\linearmath\btidebugdraw.h(171): warning C4305: '引数': 'double' から 'const btScalar' へ切り詰めます。
-c:\directx\physicsshot\library\myengine\material.h(27): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'ShaderMatrix' の左辺を無視します。
-c:\directx\physicsshot\library\myengine\material.h(39): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'ShaderVector4' の左辺を無視します。
-c:\directx\physicsshot\library\myengine\physicsworld.cpp(202): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
-LINK : warning LNK4068: /MACHINE の指定がありません。X86 を既定とします。
-  Library.vcxproj -> C:\DirectX\PhysicsShot\Debug\Library.lib
+c:\directx\gametool\library\myengine\scene.h(39): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'Scene::NodeSort' の左辺を無視します。
+c:\directx\gametool\library\myengine\touchlistener.h(36): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'TouchListener::Touch' の左辺を無視します。
+c:\directx\gametool\library\myengine\material.h(27): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'ShaderMatrix' の左辺を無視します。
+c:\directx\gametool\library\myengine\material.h(39): warning C4091: 'typedef ': 変数が何も宣言されていないときは、'ShaderVector4' の左辺を無視します。
+c:\directx\gametool\library\myengine\debugscene.cpp(77): warning C4477: 'sprintf_s' : 書式文字列 '%.1f' には、型 'double' の引数が必要ですが、可変個引数 1 は型 'int' です
+c:\directx\gametool\library\myengine\debugscene.cpp(85): warning C4477: 'sprintf_s' : 書式文字列 '%.1f' には、型 'double' の引数が必要ですが、可変個引数 1 は型 'int' です
+c:\directx\gametool\library\myengine\debugscene.cpp(94): warning C4477: 'sprintf_s' : 書式文字列 '%.1f' には、型 'double' の引数が必要ですが、可変個引数 1 は型 'int' です
+c:\directx\gametool\library\myengine\debugscene.cpp(236): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\directx\gametool\library\myengine\debugscene.cpp(225): warning C4101: 'str': ローカル変数は 1 度も使われていません。
+c:\directx\gametool\library\myengine\debugscene.cpp(287): warning C4244: '引数': 'FLOAT' から 'int' への変換です。データが失われる可能性があります。
+c:\directx\gametool\library\myengine\debugscene.cpp(295): warning C4244: '引数': 'FLOAT' から 'int' への変換です。データが失われる可能性があります。
+c:\directx\gametool\library\myengine\debugscene.cpp(344): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\directx\gametool\library\myengine\debugscene.cpp(355): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\directx\gametool\library\myengine\debugscene.cpp(391): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+c:\directx\gametool\library\myengine\debugscene.cpp(402): warning C4018: '<': signed と unsigned の数値を比較しようとしました。
+  Library.vcxproj -> C:\DirectX\GameTool\Debug\Library.lib

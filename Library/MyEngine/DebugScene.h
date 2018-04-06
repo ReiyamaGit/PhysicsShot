@@ -30,7 +30,7 @@ private:
 	bool m_isEdit;
 	float m_camZoomPos;
 
-	Node*  m_selectedItem;						//選択したItem	
+	
 	Label* m_xPos;								//ItemのX座標
 	Label* m_yPos;								//ItemのY座標
 	Label* m_zPos;								//ItemのZ座標
@@ -47,6 +47,9 @@ private:
 	D3DXVECTOR3 m_GameCamPos;
 	D3DXVECTOR2 m_SceneCamPos;
 	D3DXVECTOR2 m_touchBeginPos;
+
+protected:
+	Node*  m_selectedItem;						//選択したItem	
 
 //function-----------------------------------------------------------------
 public:

@@ -82,6 +82,8 @@ Sprite* Sprite::Create(LPCSTR fileName)
 
 	if (sprite)
 	{
+		sprite->m_transform->m_attachNode = sprite;
+		sprite->m_transform->m_typeName = "Sprite";
 		sprite->Load(fileName);
 		return sprite;
 	}

@@ -13,7 +13,6 @@
 #include "Camera.h"
 #include "Light.h"
 #include "Scheduler.h"
-#include "Draw3DNode.h"
 #include "ToggleButton.h"
 #include "TouchListener.h"
 
@@ -40,7 +39,7 @@ Scene::Scene()
  ******************************************************/
 Scene::~Scene()
 {
-	R_SAFE_DELETE(main_camera_);
+	main_camera_ = nullptr;
 	R_SAFE_DELETE(m_physicsWorld);
 	
 }

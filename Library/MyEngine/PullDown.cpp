@@ -7,16 +7,25 @@
 
 
 
-//preprocessor----------------------------------
+ //preprocessor----------------------------------
 #include "PullDown.h"
 #include "TouchListener.h"
+
+
+
+//const
+const int FRAME_COUNT = 30;
 
 
 /************************************************
  *	@brief			コンストラクタ
  ************************************************/
 PullDown::PullDown()
-: m_isDown(false)
+	: m_isOpen(true)
+	, m_currentIndex(0)
+	, m_openButtonSize(0)
+	, m_isAnimation(false)
+	,m_mainSpriteName("")
 {
 	m_sprites.clear();
 }
@@ -27,7 +36,6 @@ PullDown::PullDown()
  ************************************************/
 PullDown::~PullDown()
 {
-	m_sprites.shrink_to_fit();
 }
 
 
@@ -46,7 +54,6 @@ PullDown* PullDown::Create(Sprite* sprites)
 	if (ret)
 	{
 		ret->Init(sprites);
-		ret->AutoRelease();
 		return ret;
 	}
 
@@ -69,6 +76,7 @@ void PullDown::AddList(Sprite* sprite)
 	sprite->m_transform->SetParent(this->m_transform);
 	m_sprites.push_back(sprite);
 	SetItemPosition();
+	m_openButtonSize = m_sprites[0]->m_transform->m_size.y * m_sprites.size();
 }
 
 
@@ -84,6 +92,7 @@ void PullDown::RemoveAtIndex(int index)
 
 	R_SAFE_COUNT_RELEASE(m_sprites[index]);
 	m_sprites.erase(m_sprites.begin() + index);
+	m_transform->m_children.erase(m_transform->m_children.begin() + index);
 }
 
 
@@ -99,6 +108,9 @@ void PullDown::Init(Sprite* sprite)
 	sprite->m_transform->m_position = this->m_transform->m_position;
 	sprite->m_transform->SetParent(this->m_transform);
 	m_sprites.push_back(sprite);
+	m_mainSpriteName = m_sprites[0]->GetSpriteName();
+
+	Input();
 
 }
 
@@ -121,6 +133,18 @@ void PullDown::SetItemPosition()
 }
 
 
+bool PullDown::Update(float delta)
+{
+	if (!Node::Update(delta))
+	{
+		return false;
+	}
+
+	if (m_isAnimation)
+		ButtonAnimation();
+
+	return true;
+}
 
 
 /**********************************************************************************
@@ -128,7 +152,27 @@ void PullDown::SetItemPosition()
  **********************************************************************************/
 void PullDown::Input()
 {
-	
+	//MainImageを押したとき
+	//Animationを開始 → 終了後m_isOpenを反転
+
+	TouchListener* listener = TouchListener::Create();
+
+	listener->onTouchBegan = [this](TouchListener::Touch touch)
+	{
+		for (int i = 0; i < m_sprites.size(); i++)
+		{
+			if (m_sprites[i]->GetBoudingBox2D().ContainsPoint(GLOBAL::Global::m_input->GetMousePosition()))
+			{
+				m_mainSpriteName = m_sprites[i]->GetSpriteName();
+				m_isAnimation = true;
+				SwitchMainImage(true);
+			}
+		}
+
+		return true;
+	};
+
+	GLOBAL::Global::m_eventDispatcher->AddEventListener(listener);
 }
 
 
@@ -139,16 +183,48 @@ void PullDown::Input()
  *	@brief					画像を切り替える
  *	@param[mainSprite]		後から追加する画像
  **********************************************************************************/
-void PullDown::MainSpriteChange(Sprite* mainSprite)
+void PullDown::SwitchMainImage(bool isClick)
 {
-
 	for (int i = 0; i < m_sprites.size(); i++)
 	{
-		if (mainSprite->GetSpriteName() == m_sprites[i]->GetSpriteName())
+		if (!isClick && m_isOpen && m_mainSpriteName != m_sprites[i]->GetSpriteName())
 		{
-			m_sprites.erase(m_sprites.begin() + i);
+			m_sprites[i]->m_isActive = false;
 		}
+		else if(isClick)
+		{
+			m_sprites[i]->m_isActive = true;
+		}
+
+	}
+	
+}
+
+
+void PullDown::ButtonAnimation()
+{
+	int open = m_isOpen ? -1 : 1;
+
+
+	for (int i = 1; i < m_sprites.size(); i++)
+	{
+
+		if ((m_sprites[i]->m_transform->m_position.y > 0 && m_isOpen) 
+		 || (m_sprites[i]->m_transform->m_position.y < m_sprites[i]->m_transform->m_size.y * i && !m_isOpen))
+		{
+			m_sprites[i]->m_transform->m_position = D3DXVECTOR3(m_sprites[i]->m_transform->m_position.x
+				, m_sprites[i]->m_transform->m_position.y + m_sprites[i]->m_transform->m_size.y / FRAME_COUNT * i * open
+				, m_sprites[i]->m_transform->m_position.z);
+		}
+		else if ((m_sprites[m_sprites.size() - 1]->m_transform->m_position.y <= 0 
+			   || m_sprites[i]->m_transform->m_position.y >= m_sprites[i]->m_transform->m_size.y * i) 
+			   && i == (m_sprites.size() - 1))
+		{
+			m_isAnimation = false;
+			SwitchMainImage(false);
+			m_isOpen = !m_isOpen;
+		}
+		
 	}
 
-	m_sprites.insert(m_sprites.begin(), mainSprite);
 }

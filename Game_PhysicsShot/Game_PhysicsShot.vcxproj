@@ -20,19 +20,19 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{24146FB2-5AEE-4E13-99A3-49A7BDBAE079}</ProjectGuid>
-    <RootNamespace>Library</RootNamespace>
+    <ProjectGuid>{7D58DEAB-3D0A-4382-972D-56E4A6E390D3}</ProjectGuid>
+    <RootNamespace>Game_PhysicsShot</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -82,12 +82,13 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\kirit\Desktop\bullet3-2.87\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\kirit\Desktop\bullet3-2.87\src;C:\DirectX\GameTool\Library\MyEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
-    <Lib>
-      <AdditionalLibraryDirectories>C:\Users\kirit\Desktop\bullet3-2.87\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Users\kirit\Desktop\bullet3-2.87\bin;C:\DirectX\GameTool\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Library.lib;Bullet2FileLoader_vs2010_debug.lib;Bullet3Collision_vs2010_debug.lib;Bullet3Common_vs2010_debug.lib;Bullet3Dynamics_vs2010_debug.lib;Bullet3Geometry_vs2010_debug.lib;Bullet3OpenCL_clew_vs2010_debug.lib;BulletCollision_vs2010_debug.lib;BulletDynamics_vs2010_debug.lib;BulletInverseDynamics_vs2010_debug.lib;BulletSoftBody_vs2010_debug.lib;clsocket_vs2010_debug.lib;LinearMath_vs2010_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -103,16 +104,15 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\kirit\Desktop\bullet3-2.87\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\kirit\Desktop\bullet3-2.87\src;C:\DirectX\GameTool\Library\MyEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\kirit\Desktop\bullet3-2.87\bin;C:\DirectX\GameTool\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Library.lib;Bullet2FileLoader_vs2010_debug.lib;Bullet3Collision_vs2010_debug.lib;Bullet3Common_vs2010_debug.lib;Bullet3Dynamics_vs2010_debug.lib;Bullet3Geometry_vs2010_debug.lib;Bullet3OpenCL_clew_vs2010_debug.lib;BulletCollision_vs2010_debug.lib;BulletDynamics_vs2010_debug.lib;BulletInverseDynamics_vs2010_debug.lib;BulletSoftBody_vs2010_debug.lib;clsocket_vs2010_debug.lib;LinearMath_vs2010_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
-    <Lib>
-      <AdditionalLibraryDirectories>C:\Users\kirit\Desktop\bullet3-2.87\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-    </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -128,62 +128,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MyEngine\Camera.cpp" />
-    <ClCompile Include="MyEngine\ClassSeries.cpp" />
-    <ClCompile Include="MyEngine\Commponent.cpp" />
-    <ClCompile Include="MyEngine\DebugScene.cpp" />
-    <ClCompile Include="MyEngine\EventDispatcher.cpp" />
-    <ClCompile Include="MyEngine\Fbx.cpp" />
-    <ClCompile Include="MyEngine\Game.cpp" />
-    <ClCompile Include="MyEngine\Global.cpp" />
-    <ClCompile Include="MyEngine\InputInterface.cpp" />
-    <ClCompile Include="MyEngine\Label.cpp" />
-    <ClCompile Include="MyEngine\Light.cpp" />
-    <ClCompile Include="MyEngine\Material.cpp" />
-    <ClCompile Include="MyEngine\MyDebugDraw.cpp" />
-    <ClCompile Include="MyEngine\Node.cpp" />
-    <ClCompile Include="MyEngine\PhysicsBody.cpp" />
-    <ClCompile Include="MyEngine\PhysicsWorld.cpp" />
-    <ClCompile Include="MyEngine\PoolManager.cpp" />
-    <ClCompile Include="MyEngine\PullDown.cpp" />
-    <ClCompile Include="MyEngine\Quad.cpp" />
-    <ClCompile Include="MyEngine\Ref.cpp" />
-    <ClCompile Include="MyEngine\Scene.cpp" />
-    <ClCompile Include="MyEngine\Scheduler.cpp" />
-    <ClCompile Include="MyEngine\Sprite.cpp" />
-    <ClCompile Include="MyEngine\ToggleButton.cpp" />
-    <ClCompile Include="MyEngine\TouchListener.cpp" />
-    <ClCompile Include="MyEngine\Transform.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PlayScene.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyEngine\Camera.h" />
-    <ClInclude Include="MyEngine\ClassSeries.h" />
-    <ClInclude Include="MyEngine\Commponent.h" />
-    <ClInclude Include="MyEngine\Constant.h" />
-    <ClInclude Include="MyEngine\DebugScene.h" />
-    <ClInclude Include="MyEngine\EventDispatcher.h" />
-    <ClInclude Include="MyEngine\Fbx.h" />
-    <ClInclude Include="MyEngine\Game.h" />
-    <ClInclude Include="MyEngine\Global.h" />
-    <ClInclude Include="MyEngine\InputInterface.h" />
-    <ClInclude Include="MyEngine\Label.h" />
-    <ClInclude Include="MyEngine\Light.h" />
-    <ClInclude Include="MyEngine\Material.h" />
-    <ClInclude Include="MyEngine\MyDebugDraw.h" />
-    <ClInclude Include="MyEngine\Node.h" />
-    <ClInclude Include="MyEngine\ObjectPool.h" />
-    <ClInclude Include="MyEngine\PhysicsBody.h" />
-    <ClInclude Include="MyEngine\PhysicsWorld.h" />
-    <ClInclude Include="MyEngine\PoolManager.h" />
-    <ClInclude Include="MyEngine\PullDown.h" />
-    <ClInclude Include="MyEngine\Quad.h" />
-    <ClInclude Include="MyEngine\Ref.h" />
-    <ClInclude Include="MyEngine\Scene.h" />
-    <ClInclude Include="MyEngine\Scheduler.h" />
-    <ClInclude Include="MyEngine\Sprite.h" />
-    <ClInclude Include="MyEngine\ToggleButton.h" />
-    <ClInclude Include="MyEngine\TouchListener.h" />
-    <ClInclude Include="MyEngine\Transform.h" />
+    <ClInclude Include="PlayScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -13,194 +13,189 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="ソース ファイル\Engine">
-      <UniqueIdentifier>{6204839c-2918-410a-b7d2-220f2567915c}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\item">
+      <UniqueIdentifier>{20bad30d-fd0f-4066-9c3a-676e0fe92fbf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\Engine">
-      <UniqueIdentifier>{8af2d093-764f-41e0-8329-d7c38cff11d3}</UniqueIdentifier>
+    <Filter Include="ソース ファイル\bullet">
+      <UniqueIdentifier>{08ebcc29-7501-4af0-94ca-2af82a7a936f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ソース ファイル\base">
+      <UniqueIdentifier>{65269095-53a4-4286-b362-bdac9813bf5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\base">
+      <UniqueIdentifier>{4aa2881e-acaf-4097-8089-bf48c145f131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\item">
+      <UniqueIdentifier>{7a1033d6-364d-44a0-96fe-ca7468f75752}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\bullet">
+      <UniqueIdentifier>{3d9e45e7-5d4e-4348-8695-50f2e0e7cfaf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MyEngine\Fbx.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Label.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Light.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Material.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Node.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\PullDown.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Quad.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Sprite.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\ToggleButton.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="MyEngine\Camera.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\item</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\ClassSeries.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\base</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\Commponent.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\base</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\DebugScene.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\base</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\EventDispatcher.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\base</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Fbx.cpp">
+      <Filter>ソース ファイル\item</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\Game.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\base</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\Global.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\base</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\InputInterface.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\base</Filter>
     </ClCompile>
-    <ClCompile Include="MyEngine\PhysicsWorld.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+    <ClCompile Include="MyEngine\Label.cpp">
+      <Filter>ソース ファイル\item</Filter>
     </ClCompile>
-    <ClCompile Include="MyEngine\PoolManager.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+    <ClCompile Include="MyEngine\Light.cpp">
+      <Filter>ソース ファイル\item</Filter>
     </ClCompile>
-    <ClCompile Include="MyEngine\Ref.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Scene.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Scheduler.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\TouchListener.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\Transform.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\PhysicsBody.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="MyEngine\ColorLine.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+    <ClCompile Include="MyEngine\Material.cpp">
+      <Filter>ソース ファイル\item</Filter>
     </ClCompile>
     <ClCompile Include="MyEngine\MyDebugDraw.cpp">
-      <Filter>ソース ファイル\Engine</Filter>
+      <Filter>ソース ファイル\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Node.cpp">
+      <Filter>ソース ファイル\item</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\PhysicsBody.cpp">
+      <Filter>ソース ファイル\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\PhysicsWorld.cpp">
+      <Filter>ソース ファイル\bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\PoolManager.cpp">
+      <Filter>ソース ファイル\base</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\PullDown.cpp">
+      <Filter>ソース ファイル\item</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Quad.cpp">
+      <Filter>ソース ファイル\item</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Ref.cpp">
+      <Filter>ソース ファイル\base</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Scene.cpp">
+      <Filter>ソース ファイル\base</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Scheduler.cpp">
+      <Filter>ソース ファイル\base</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Sprite.cpp">
+      <Filter>ソース ファイル\item</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\ToggleButton.cpp">
+      <Filter>ソース ファイル\item</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\TouchListener.cpp">
+      <Filter>ソース ファイル\base</Filter>
+    </ClCompile>
+    <ClCompile Include="MyEngine\Transform.cpp">
+      <Filter>ソース ファイル\base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyEngine\Fbx.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Label.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Light.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Material.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\PullDown.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Quad.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Sprite.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\ToggleButton.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="MyEngine\Camera.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\item</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\ClassSeries.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\Commponent.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\Constant.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\DebugScene.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\EventDispatcher.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\Fbx.h">
+      <Filter>ヘッダー ファイル\item</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\Game.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\Global.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\InputInterface.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+      <Filter>ヘッダー ファイル\base</Filter>
     </ClInclude>
-    <ClInclude Include="MyEngine\PhysicsWorld.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+    <ClInclude Include="MyEngine\Label.h">
+      <Filter>ヘッダー ファイル\item</Filter>
     </ClInclude>
-    <ClInclude Include="MyEngine\PoolManager.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
+    <ClInclude Include="MyEngine\Light.h">
+      <Filter>ヘッダー ファイル\item</Filter>
     </ClInclude>
-    <ClInclude Include="MyEngine\Ref.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Scene.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Scheduler.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\TouchListener.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Transform.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\ObjectPool.h">
-      <Filter>ヘッダー ファイル\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\Node.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\PhysicsBody.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="MyEngine\ColorLine.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="MyEngine\Material.h">
+      <Filter>ヘッダー ファイル\item</Filter>
     </ClInclude>
     <ClInclude Include="MyEngine\MyDebugDraw.h">
-      <Filter>ヘッダー ファイル</Filter>
+      <Filter>ヘッダー ファイル\bullet</Filter>
     </ClInclude>
-    <ClInclude Include="resource1.h">
-      <Filter>ヘッダー ファイル</Filter>
+    <ClInclude Include="MyEngine\Node.h">
+      <Filter>ヘッダー ファイル\item</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Library.rc">
-      <Filter>リソース ファイル</Filter>
-    </ResourceCompile>
+    <ClInclude Include="MyEngine\ObjectPool.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\PhysicsBody.h">
+      <Filter>ヘッダー ファイル\bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\PhysicsWorld.h">
+      <Filter>ヘッダー ファイル\bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\PoolManager.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\PullDown.h">
+      <Filter>ヘッダー ファイル\item</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\Quad.h">
+      <Filter>ヘッダー ファイル\item</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\Ref.h">
+      <Filter>ヘッダー ファイル\item</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\Scene.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\Sprite.h">
+      <Filter>ヘッダー ファイル\item</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\ToggleButton.h">
+      <Filter>ヘッダー ファイル\item</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\TouchListener.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\Transform.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
+    <ClInclude Include="MyEngine\Scheduler.h">
+      <Filter>ヘッダー ファイル\base</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

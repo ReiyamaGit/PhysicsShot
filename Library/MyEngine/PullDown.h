@@ -23,8 +23,14 @@ class PullDown : public Node
 private:
 	std::vector<Sprite*> m_sprites;
 
-	bool m_isDown;
+	bool m_isOpen;
+	bool m_isAnimation;
 
+	int m_currentIndex;
+
+	int  m_openButtonSize;
+
+	LPCSTR m_mainSpriteName;
 
 //function-----------------------------------------------
 public:
@@ -60,7 +66,7 @@ public:
 	/******************************************************
 	 *	@brief			PullDownAnimationé¿ëï
 	 *******************************************************/
-	void Lerp(D3DXVECTOR2 start, D3DXVECTOR2 end, int frame);
+	void ButtonAnimation();
 
 	void SetItemPosition();
 
@@ -69,6 +75,8 @@ public:
 	 *	@brief				èâä˙âªÇ∑ÇÈ
 	 **********************************************************************************/
 	void Init(Sprite* sprite);
+
+	bool Update(float delta) override;
 
 
 	/**********************************************************************************
@@ -82,7 +90,7 @@ public:
 	 *	@brief					âÊëúÇêÿÇËë÷Ç¶ÇÈ
 	 *	@param[mainSprite]		å„Ç©ÇÁí«â¡Ç∑ÇÈâÊëú
 	 **********************************************************************************/
-	void MainSpriteChange(Sprite* mainSprite);
+	void SwitchMainImage(bool isClick);
 };
 
 #endif //!__PULLDOWN__

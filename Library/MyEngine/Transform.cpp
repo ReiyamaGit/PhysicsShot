@@ -39,7 +39,7 @@ Transform::Transform()
  *****************************************************************/
 Transform::~Transform()
 {
-	for (int i = m_children.size() - 1; i > 0; i--)
+	for (int i = m_children.size() - 1; i >= 0; i--)
 	{
 		R_SAFE_DELETE(m_children[i]->m_attachNode);
 		m_children.erase(m_children.begin() + i);

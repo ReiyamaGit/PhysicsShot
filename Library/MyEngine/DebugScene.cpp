@@ -270,7 +270,7 @@ void DebugScene::CreateInSelectedPoint()
 {
 
 	//---エディットボタン上では作成しないように。
-	if (m_editButton->CheckCursorOnToggleButton())
+	if (m_editButton->CheckCursorOnToggleButton() || !m_isEdit)
 	{
 
 		return;
